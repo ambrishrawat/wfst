@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#
+
+for ii in a b c d e f g h i j k l m n o p q r s t u v w x y z
+do
+    for jj in a b c d e f g h i j k l m n o p q r s t u v w x y z
+    do
+
+    echo '0 1' $ii $jj >> rot.txt
+    done
+done
+
+
+for ii in a b c d e f g h i j k l m n o p q r s t u v w x y z
+do
+    for jj in a b c d e f g h i j k l m n o p q r s t u v w x y z
+    do
+
+    echo '1 2' $jj $ii >> rot.txt
+    done
+done
+
+echo '2' >> rot.txt

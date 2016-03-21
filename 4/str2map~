@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+import os
+
+def sort_list(ifile,file2):
+	pass
+
+if __name__ == "__main__":
+	import argparse
+	parser = argparse.ArgumentParser(description='Sort number list.')
+	parser.add_argument('--msg', type=str, default='my secret message', help='Message')
+	parser.add_argument('--ofile', type=str, default="./listd5m.txt", help='Output')
+	args = parser.parse_args()
+	msg = args.msg
+	opath = args.ofile
+	print msg
+	'''
+	with open(ipath, "r") as ifile:
+		with open(ipath2, "r") as ifile2:
+        		wstr = sort_list(ifile,ifile2)
+	with open(opath, "w") as ofile:
+        	ofile.write(wstr)
+	'''

@@ -1,0 +1,35 @@
+\ntwo_a\n
+\nBefore\n
+# of states                                       5
+# of arcs                                         56
+\nAfter\n
+# of states                                       2
+# of arcs                                         53
+\ntwo_b\n
+\nBefore\n
+# of states                                       5
+# of arcs                                         106
+\nAfter\n
+# of states                                       4
+# of arcs                                         130
+\ntwo_c\n
+\nBefore\n
+# of states                                       3
+# of arcs                                         78
+\nAfter\n
+# of states                                       3
+# of arcs                                         78
+\ntwo_d\n
+\nBefore\n
+# of states                                       4
+# of arcs                                         155
+\nAfter\n
+# of states                                       4
+# of arcs                                         180
+\ntwo_e\n
+\nBefore\n
+# of states                                       4
+# of arcs                                         180
+\nAfter\n
+# of states                                       4
+# of arcs                                         180

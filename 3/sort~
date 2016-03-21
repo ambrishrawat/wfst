@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+import os
+
+def sort_list(ifile,file2):
+
+	ilist = ifile.readlines()
+	ilist = [i.strip().split() for i in ilist]
+	ilist = [''.join(i) for i in ilist]
+	ilist = [int(i) for i in ilist]
+
+	ilist2 = ifile2.readlines()
+	ilist2 = [i.strip().split() for i in ilist2]
+	ilist2 = [' '.join(i) for i in ilist2]
+	
+	ilist3 = sorted(zip(ilist,ilist2))
+	ilist3 = [str(i[0]) + ' ' + i[1] for i in ilist3 ]
+	#print ilist3
+	ilist = sorted(ilist)
+	ilist = [str(i) for i in ilist]
+	wstr = '\n'.join(ilist3) 
+	return wstr
+
+if __name__ == "__main__":
+	import argparse
+	parser = argparse.ArgumentParser(description='Sort number list.')
+	parser.add_argument('--ifile', type=str, default='./listd5.txt', help='Input')
+	parser.add_argument('--ifile2', type=str, default='./listd5o.txt', help='Input')
+	parser.add_argument('--ofile', type=str, default="./listd5m.txt", help='Output')
+	args = parser.parse_args()
+	ipath = args.ifile
+	ipath2 = args.ifile2
+	opath = args.ofile
+	
+	with open(ipath, "r") as ifile:
+		with open(ipath2, "r") as ifile2:
+        		wstr = sort_list(ifile,ifile2)
+	with open(opath, "w") as ofile:
+        	ofile.write(wstr)

@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+import os
+import sys
+def msg2map(msgfile):
+	msg = list(msgfile)[0].strip()
+	r = ''
+	for i in range(len(msg)):
+		if msg[i] == ' ':
+			r+=str(i) + ' ' + str(i+1) + ' '+ '<space>' + ' ' + '<space>' + '\n'
+		else:
+			r+=str(i) + ' ' + str(i+1) + ' '+ msg[i] + ' ' + msg[i] + '\n'
+	r+=str(len(msg)) + '\n'
+	return r
+	
+
+if __name__ == "__main__":
+	import argparse
+	parser = argparse.ArgumentParser(description='Sort number list.')
+	parser.add_argument('--ofile', type=str, default="./msgmap.txt", help='Output')
+	args = parser.parse_args()
+	opath = args.ofile
+	mapstr = msg2map(sys.stdin)
+	with open(opath, "w") as ofile:
+        	ofile.write(mapstr)
+	
